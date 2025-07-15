@@ -1,16 +1,12 @@
 from InquirerPy import prompt
-from InquirerPy.validator import NumberValidator
+from InquirerPy.validator import EmptyInputValidator
 
 questions = [
     {
         "type": "input",
-        "message": "Enter your age:",
-        "validate": NumberValidator(),
-        "invalid_message": "Input should be number.",
-        "default": "18",
-        "name": "age",
-        "filter": lambda result: int(result),
-        "transformer": lambda result: "Adult" if int(result) >= 18 else "Youth",
+        "message": "Enter the Project Title:",
+        "validate": EmptyInputValidator(),
+        "name": "title",
     },
     {
         "type": "rawlist",
@@ -28,6 +24,13 @@ questions = [
         "when": lambda result: result["drink"] in {"Wine", "Beer"},
     },
     {"type": "confirm", "message": "Confirm?", "default": True},
+
+    {
+        "type": "input",
+        "message": "Provide the project author's name (can be a firm)",
+        "validate": EmptyInputValidator(),
+        "name": "author",
+    },
 ]
 
 result = prompt(questions=questions)
