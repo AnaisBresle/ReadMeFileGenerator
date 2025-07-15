@@ -1,38 +1,14 @@
 from InquirerPy import inquirer
 from InquirerPy.validator import EmptyInputValidator
 
-
-
-
-
-questions = [
-    {
-        "type": "input", # single line text input
-        "message": "Enter the Project Title:",
-        "validate": EmptyInputValidator(),
-        "name": "title",
-        
-    },
-   
-      inquirer.text(message="Provide a short description of the project:", multiline=True), # multiline input in editor
-   
-    {
-        "type": "input",
-        "name": "usage",
-        "message": "Describe how to use this project and what are the expected outputs."
-    },
-
-     {
-        "type": "input",
-        "name": "installation",
-        "message": "Enter Installation Instructions:"
-    },
-
-     {
-        "type": "list",
-        "name": "license",
-        "message": "Choose a license:",
-        "choices": [
+answers = {
+    "title": inquirer.text(message="Enter the Project Title:", validate=EmptyInputValidator()).execute(),
+    "description": inquirer.text(message="Provide a short description of the project:", multiline=True).execute(), 
+    "usage": inquirer.text(message="Describe how to use this project and what are the expected outputs:", multiline=True).execute(),
+    "installation": inquirer.text(message="Enter Installation Instructions:", multiline=True).execute(),
+    "license": inquirer.select (
+        message="Choose a license:",
+        choices= [
             "No License — default copyright applies",
             "Unlicensed — no permissions granted",
             "Apache 2.0",
@@ -45,21 +21,11 @@ questions = [
             "Mozilla Public License 2.0",
 
         ],
-        "default": "MIT"
-    },
-  
-    {
-        "type": "input",
-        "name": "author",
-        "message": "Author Name:",
-        "validate": EmptyInputValidator(),
-    },
-    {
-        "type": "input",
-        "name": "contact",
-        "message": "Contact Information (email, website, etc.):",
-        "validate": EmptyInputValidator(),
+        default="MIT").execute(),
+    "author": inquirer.text(message="Author Name:", validate=EmptyInputValidator()).execute(),
+    "contact": inquirer.text(message="Contact Information (email, website, etc.):", validate=EmptyInputValidator()).execute(),
     }
-]
 
-result = prompt(questions=questions)
+
+for key, value in answers.items():
+    print(f"{key}: {value}")
