@@ -8,14 +8,10 @@ questions = [
         "validate": EmptyInputValidator(),
         "name": "title",
     },
-    {
-        "type": "rawlist",
-        "message": "What drinks would you like to buy:",
-        "default": 2,
-        "choices": lambda result: ["Soda", "Cidr", "Water", "Milk"]
-        if result["age"] < 18
-        else ["Wine", "Beer"],
-        "name": "drink",
+     {
+        "type": "editor",  # <-- Multi-line input
+        "message": "📝 Project Description:",
+        "name": "description",
     },
     {
         "type": "list",
