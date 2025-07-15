@@ -12,6 +12,7 @@ questions = [
         "type": "editor",  # <-- Multi-line input
         "message": "📝 Project Description:",
         "name": "description",
+        "default":"",
     },
     {
         "type": "list",
