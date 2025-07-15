@@ -1,5 +1,9 @@
-from InquirerPy import prompt
+from InquirerPy import inquirer
 from InquirerPy.validator import EmptyInputValidator
+
+
+
+
 
 questions = [
     {
@@ -10,20 +14,16 @@ questions = [
         
     },
    
-    {
-        "type": "editor",  # multiline input in editor
-        "name": "description",
-        "message": "Provide a short description of the project:"
-    },
+      inquirer.text(message="Provide a short description of the project:", multiline=True), # multiline input in editor
    
     {
-        "type": "editor",
+        "type": "input",
         "name": "usage",
         "message": "Describe how to use this project and what are the expected outputs."
     },
 
      {
-        "type": "editor",
+        "type": "input",
         "name": "installation",
         "message": "Enter Installation Instructions:"
     },
