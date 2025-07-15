@@ -46,7 +46,7 @@ questions = [
 
         ],
         "default": "MIT"
-    }
+    },
   
     {
         "type": "input",
