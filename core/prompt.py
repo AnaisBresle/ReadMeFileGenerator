@@ -1,4 +1,4 @@
-from PyInquirer import prompt, print_json
+from InquirerPy import prompt
 
 questions = [
     {
@@ -9,4 +9,4 @@ questions = [
 ]
 
 answers = prompt(questions)
-print_json(answers)  # use the answers as input for your app
+print_json(answers)  # use the answers as input for your app 
