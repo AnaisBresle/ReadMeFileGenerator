@@ -3,31 +3,39 @@ from InquirerPy.validator import EmptyInputValidator
 
 questions = [
     {
-        "type": "input",
+        "type": "input", # single line text input
         "message": "Enter the Project Title:",
         "validate": EmptyInputValidator(),
         "name": "title",
     },
-     {
-        "type": "editor",  # <-- Multi-line input
-        "message": "📝 Project Description:",
+   
+    {
+        "type": "editor",  # multiline input in editor
         "name": "description",
-        "default":"",
+        "message": "Enter the Project Description:"
     },
     {
-        "type": "list",
-        "message": "Would you like a bag:",
-        "choices": ["Yes", "No"],
-        "when": lambda result: result["drink"] in {"Wine", "Beer"},
+        "type": "editor",
+        "name": "installation",
+        "message": "Enter Installation Instructions:"
     },
-    {"type": "confirm", "message": "Confirm?", "default": True},
-
+    {
+        "type": "editor",
+        "name": "usage",
+        "message": "Describe how to use this project and what are the expected outputs."
+    },
+  
     {
         "type": "input",
-        "message": "Provide the project author's name (can be a firm)",
-        "validate": EmptyInputValidator(),
         "name": "author",
+        "message": "Author Name:",
+        "validate": EmptyInputValidator(),
     },
+    {
+        "type": "input",
+        "name": "contact",
+        "message": "Contact Information (email, website, etc.):"
+    }
 ]
 
 result = prompt(questions=questions)
