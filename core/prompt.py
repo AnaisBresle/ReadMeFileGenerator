@@ -23,7 +23,7 @@ answers = {
         ],
         default="MIT").execute(),
     "author": inquirer.text(message="Author Name:", validate=EmptyInputValidator()).execute(),
-    "contact": inquirer.text(message="Contact Information (email, website, etc.):", validate=EmptyInputValidator()).execute(),
+    "contact": inquirer.text(message="Contact Information (email, website, etc.),:",multiline=True, validate=EmptyInputValidator()).execute(),
     }
 
 
