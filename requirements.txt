@@ -1,2 +1,2 @@
-InquirerPy
-markdown 
+inquirerpy
+Markdown 
