@@ -1,5 +1,5 @@
 from InquirerPy import inquirer
-from InquirerPy.validator import EmptyInputValidator
+from InquirerPy.validator import EmptyInputValidator 
 
 answers = {
     "title": inquirer.text(message="Enter the Project Title:", validate=EmptyInputValidator()).execute(),
