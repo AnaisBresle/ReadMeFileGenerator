@@ -12,4 +12,3 @@ if __name__=="_main_":
     answers = get_answers()
     write_readme(answers)
 
-print(f"{filename} generated!")
