@@ -5,7 +5,7 @@ answers = {
     "title": inquirer.text(message="Enter the Project Title:", validate=EmptyInputValidator()).execute(),
     "description": inquirer.text(message="Provide a short description of the project:", multiline=True).execute(), 
     "usage": inquirer.text(message="Describe how to use this project and what are the expected outputs:", multiline=True).execute(),
-    "installation": inquirer.text(message="Enter Installation Instructions:", multiline=True).execute(),
+    "installation": inquirer.text(message="Enter Installation Instructions (one step per line):", multiline=True).execute(),
     "license": inquirer.select (
         message="Choose a license:",
         choices= [
@@ -22,9 +22,25 @@ answers = {
 
         ],
         default="MIT").execute(),
+        "contribution": inquirer.select(
+            message="Do you want to include a link to a CONTRIBUTING.md file?",
+            choices=[
+                "Yes",
+                "No",
+            ]).execute(),
+            
     "author": inquirer.text(message="Author Name:", validate=EmptyInputValidator()).execute(),
-    "contact": inquirer.text(message="Contact Information (email, website, etc.),:",multiline=True, validate=EmptyInputValidator()).execute(),
+    "contact": inquirer.text(message="Contact Information (email, website, etc. - (one info per line):",multiline=True, validate=EmptyInputValidator()).execute(),
+    "links": inquirer.text(message="Useful Links:", multiline=True).execute(),
     }
+
+# Ask for the CONTRIBUTING.md link only if they said "Yes"
+if answers["contribution"] == "Yes":
+    answers["contributing_link"] = inquirer.text(
+        message="Provide the link to the CONTRIBUTING.md file:"
+    ).execute()
+else:
+    answers["contributing_link"] = None
 
 
 for key, value in answers.items():
