@@ -36,11 +36,11 @@ def get_answers():
      }
 
 # Ask for the CONTRIBUTING.md link only if they said "Yes"
-if answers["contribution"] == "Yes":
-    answers["contributing_link"] = inquirer.text(
+    if answers["contribution"] == "Yes":
+        answers["contributing_link"] = inquirer.text(
         message="Provide the link to the CONTRIBUTING.md file:"
     ).execute()
-else:
-    answers["contributing_link"] = None
+    else:
+        answers["contributing_link"] = None
 
-return answers
+    return answers
