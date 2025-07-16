@@ -1,6 +1,6 @@
 from core.prompt import get_answers
 
-answers = get_answers()
+
 
 def write_readme(data, filename="ReadMe-test.md"):
     
@@ -9,7 +9,7 @@ def write_readme(data, filename="ReadMe-test.md"):
             f.write(f"{key.upper()}:\n{value}\n\n")
 
 if __name__=="_main_":
-
+    answers = get_answers()
     write_readme(answers)
 
 print(f"{filename} generated!")
