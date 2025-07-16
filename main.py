@@ -1,6 +1,6 @@
 from core.prompt import get_answers
 
-def write_readme(data, filename="ReadMe-test.md"):
+def write_readme(answers, filename="ReadMe-test.md"):
     answers = get_answers()
     with open(filename, "w", encoding="utf-8") as f:
         for key, value in answers.items():
