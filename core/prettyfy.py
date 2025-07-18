@@ -1,4 +1,4 @@
-from rich import Console
+from rich.console import Console
 #from rich import Panel  # bordered boxes for content
 #from rich import Syntax  # higlighter
 
