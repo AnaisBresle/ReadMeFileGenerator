@@ -13,7 +13,7 @@ def main():
 
     # 3. Make MD file prettier
     prettyfy = RichStyle()
-    prettyfy.display_markdown("ReadMe-test.md")
+    prettyfy.display_markdown("README.md")
 
     print("\n ReadMe File created")
 

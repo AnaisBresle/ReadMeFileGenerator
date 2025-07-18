@@ -1,41 +1,32 @@
-TITLE:
-Anais Testing 
+# A
 
-DESCRIPTION:
-line 1 thi is a very long line just to see how this looks in the readme file and we can format it is someone is writing very long sentences. Also adding other sentence in in facthe users is writing a paragrpah without breaks. and here is to see what happens if there is not capitalisation at the beginning of a sentnece. write_readme(answers)
-line 2
+## Description
+line one 
+line two 
+jgmslgnsJGVBMZOJ MNR[Iwj v.ais ,xpovpdjnsav,mx, PODI' K..KC XM MKSPD' ;LAKDP IH;KMSL;FKJ'SK;KN]0WI[]RLA;CMV;X,B'#D;F;KQRUWRKNB;DF,B';C,B;M'POSFK[SLV ;M'KJ fojP FK;MVJAFPOSKC;.MAKGJ ;A
 
+## Installation
+1. 1. FIRST DO THIS
+2. 2. DO THAT
+3. - INSTALL /// HFHFNFNFNF
 
-USAGE:
-the project is to be use at when the project owner is ready to createa detailed readme file, so it should overite any pre-existing readme.md file that may have been created when started the project. 
-line 2
+## Usage
+THIS IS AHOW IT WILL BE USED 
+AND IT HS PREETY DAM GOOD
 
-INSTALLATION:
-step 1 
-step 2 
-step 3`
-
-
-LICENSE:
+## License
 MIT
 
-CONTRIBUTION:
-Yes
+## Author
+aNAIS
 
-AUTHOR:
-anais
+## Contact
+• EMAIL
 
-CONTACT:
-email
-webstie
-tel
+• THEL 2233212000
 
+• WWW.FIREFINCH.COM
 
-LINKS:
-https://www.linkedin.com/feed/
-https://www.bbc.co.uk/
-
-
-CONTRIBUTING_LINK:
-roothttps://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors
-
+## Useful Links
+• https://www.linkedin.com/
+• https://chatgpt.com/c/687a0f15-14a0-8001-982e-342020e81a36

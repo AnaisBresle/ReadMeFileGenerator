@@ -4,7 +4,7 @@ class MarkdownWriter:
     def __init__(self,data):
         self.data = data
 
-    def write_markdown(self, filename="ReadMe-test.md"):
+    def write_markdown(self, filename="README.md"):
     
         with open(filename, "w", encoding="utf-8") as f:
          f.write(f"# {self.data['title'].strip()}\n\n")
@@ -48,7 +48,7 @@ class MarkdownWriter:
             if line:
                 f.write(f"• {line}\n")
 
-    def convert_to_html (self, md_file="ReadME-test.md", html_file="ReadMe-Test.html"):
+    def convert_to_html (self, md_file="README.md", html_file="README.html"):
          with open(md_file, "r", encoding="utf-8") as f: # Open .md file in read mode
             content = f.read()
          html_content = markdown.markdown(content) # Convert the markdown to HTML tag using markdown module - convert ## ins h1, #h2 etc.. need to add inline css if want more fancy styles. 
