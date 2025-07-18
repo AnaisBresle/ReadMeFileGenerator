@@ -1,4 +1,4 @@
-from rich import Console
+from core.prettyfy import Console
 #from rich import Panel  # bordered boxes for content
 #from rich import Syntax  # higlighter
 

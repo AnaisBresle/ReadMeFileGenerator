@@ -1,6 +1,6 @@
 from core.prompt import get_answers
 from core.markdown_writer import MarkdownWriter
-from core.rich import RichStyle
+from core.prettyfy import RichStyle
       
 
 def main():
