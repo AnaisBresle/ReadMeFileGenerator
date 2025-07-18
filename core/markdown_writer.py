@@ -4,7 +4,7 @@ class MarkdownWriter:
     def __inti__(self,data):
         self.data = data
 
-    def write_markdown(data, filename="ReadMe-test.md"):
+    def write_markdown(self, filename="ReadMe-test.md"):
     
         with open(filename, "w", encoding="utf-8") as f:
          f.write(f"# {self.data['title'].strip()}\n\n")
