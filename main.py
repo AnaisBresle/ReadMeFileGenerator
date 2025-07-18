@@ -9,7 +9,8 @@ def main():
 
     # 2. Html convert
     htmlconvert = MarkdownWriter(data)
-    htmlconvert.write_markdown()  
+    htmlconvert.write_markdown()
+    htmlconvert.convert_to_html()  
 
     # 3. Make MD file prettier
     prettyfy = RichStyle()
