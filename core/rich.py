@@ -1,6 +1,6 @@
 from rich import Console
-from rich import Panel  # bordered boxes for content
-from rich import Syntax  # higlighter
+#from rich import Panel  # bordered boxes for content
+#from rich import Syntax  # higlighter
 
 class RichStyle:
     def __init__(self):
@@ -19,3 +19,23 @@ class RichStyle:
         # Print links in blue and underlined (simple style)
         self.console.print(f"[blue underline]{line.strip()}[/blue underline]")
 
+    def display_markdown(self, filepath):
+      
+        with open(filepath, "r", encoding="utf-8") as file:
+            for line in file:  # Read md  file line by line
+                stripped = line.strip() # remove blank space
+                
+                # If the line starts with '#', it's a heading
+                if stripped.startswith("#"):
+                    self._print_heading(stripped)
+
+                # If the line starts with '-' or '*' or is a numbered list item (e.g. "1. ")
+                elif stripped.startswith(("-", "*")) or (len(stripped) > 2 and stripped[:2].isdigit() and stripped[2] == "."):
+                    self._print_list(stripped)
+                # If the line contains a markdown-style link [text](url) - This is how links are formatted in md files. 
+                elif "[" in stripped and "](" in stripped:
+                        self._print_link(stripped)
+                else:
+                    # For all other lines, print the text normally
+                        self.console.print(stripped)
+    
